@@ -7,14 +7,15 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDgNgm3y7pNRkj0ODvdF35RwtwY6fvBIJo",
-  authDomain: "e-grampanchayat-c8a61.firebaseapp.com",
-  projectId: "e-grampanchayat-c8a61",
-  storageBucket: "e-grampanchayat-c8a61.firebasestorage.app",
-  messagingSenderId: "741523048533",
-  appId: "1:741523048533:web:bd810515fb903147c0ecdc",
-  measurementId: "G-SQ7P4H6ESL"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
+console.log(firebaseConfig);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
